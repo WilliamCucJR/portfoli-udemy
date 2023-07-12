@@ -52,7 +52,7 @@ const Contact = () => {
   };
 
   return (
-    <S.ContainerContact>
+    <S.ContainerContact id="contact">
       <S.Title>Contactame</S.Title>
       <S.ContainerForm>
         {successSendForm ? (

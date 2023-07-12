@@ -3,6 +3,11 @@ import * as S from './Navbar.styles';
 
 const Navbar = () => {
   const [showMenuBurguer, setShowMenuBurguer] = useState(false);
+
+  const clickItemNav = (item) => {
+    document.getElementById(item).scrollIntoView({behavior:"smooth"});
+  }
+
   return (
     <S.ContainerNavbar>
         <S.ContainerLogo>
@@ -21,9 +26,9 @@ const Navbar = () => {
 
 
         <S.ContainerItems showMenuBurguer={showMenuBurguer}>
-          <p>About Me</p>
-          <p>Projects</p>
-          <S.Button>Contact Me</S.Button>
+          <p onClick={() => clickItemNav('about-me')}>About Me</p>
+          <p onClick={() => clickItemNav('projects')}>Projects</p>
+          <S.Button onClick={() => clickItemNav('contact')}>Contact Me</S.Button>
         </S.ContainerItems>
     </S.ContainerNavbar>
   )

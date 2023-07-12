@@ -37,7 +37,7 @@ function AboutMe() {
     ]
 
   return (
-    <S.ContainerAboutMe>
+    <S.ContainerAboutMe id='about-me'>
         <S.ContainerFlex>
             <S.ContainerText>
                 <S.Title>
